@@ -1,12 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Lora's Coffe</title>
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lora's Coffe | Cafetería en Cochabamba</title>
+  <meta name="description" content="Café de calidad, ambiente acogedor y atención con cariño. Conoce nuestro menú, nuestras sucursales y reserva tu mesa en Lora's Coffe.">
+  <meta property="og:title" content="Lora's Coffe | Cafetería en Cochabamba">
+  <meta property="og:description" content="Café de calidad, ambiente acogedor y atención con cariño.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/Logotipo elegante de café y loro.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-<h1>¡Hola Mundo! 🎉</h1>
-<script src="js/main.js"></script>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="#inicio" aria-label="Lora's Coffe, ir al inicio">
+        <img src="img/Logotipo elegante de café y loro.png" alt="Lora's Coffe">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#productos">Productos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#sucursales">Sucursales</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-header" href="#reservas">Reservar mesa</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Café de calidad en un lugar para quedarte.</h1>
+          <p>Preparamos cada bebida al momento, con granos seleccionados y recetas que combinan lo clásico con lo dulce. Ven a conversar, trabajar o simplemente descansar.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#productos">Ver productos</a>
+            <a class="btn btn-ghost" href="#reservas">Reservar mesa</a>
+          </div>
+        </div>
+        <img class="hero-img" src="img/coffe9.png" alt="Latte de vainilla con caramelo de Lora's Coffe">
+      </div>
+    </section>
+
+    <!-- FRASE -->
+    <section class="frase">
+      <p>Un buen café cambia el rumbo del día.</p>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="section" id="productos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Nuestros productos</h2>
+          <p>Una selección de nuestras bebidas más pedidas, calientes y frías.</p>
+        </div>
+        <div class="grid">
+          <article class="producto">
+            <div class="foto"><img src="img/coffe1.png" alt="Espresso en taza de vidrio" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Espresso</h3>
+              <p>Intenso y con crema, para empezar bien.</p>
+              <span class="precio">Bs 12</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/coffe2.png" alt="Americano en taza de cerámica" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Americano</h3>
+              <p>Café suave y largo, ideal para acompañar.</p>
+              <span class="precio">Bs 14</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/coffe4.png" alt="Capuchino con arte latte" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Capuchino</h3>
+              <p>Espresso con leche vaporizada y espuma cremosa.</p>
+              <span class="precio">Bs 18</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/coffe5.png" alt="Latte en vaso de vidrio con canela" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Latte</h3>
+              <p>Más leche, más suavidad, con un toque de canela.</p>
+              <span class="precio">Bs 20</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/coffe6.png" alt="Latte de caramelo con crema" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Latte de caramelo</h3>
+              <p>Con crema batida y caramelo por encima.</p>
+              <span class="precio">Bs 24</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/coffe7.png" alt="Chocolate caliente con crema" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Chocolate caliente</h3>
+              <p>Espeso, con crema batida y salsa de chocolate.</p>
+              <span class="precio">Bs 20</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/coffe8.png" alt="Moka con chocolate" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Moka</h3>
+              <p>Café y chocolate juntos, con crema y cobertura.</p>
+              <span class="precio">Bs 22</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/coffe12.png" alt="Café helado con hielo" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Café helado</h3>
+              <p>Café frío con hielo, directo y refrescante.</p>
+              <span class="precio">Bs 18</span>
+            </div>
+          </article>
+          <article class="producto">
+            <div class="foto"><img src="img/te-verde.png" alt="Matcha latte helado" loading="lazy"></div>
+            <div class="producto-body">
+              <h3>Matcha latte helado</h3>
+              <p>Té verde matcha con leche y hielo, sin café.</p>
+              <span class="precio">Bs 24</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section section-alt" id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <h2>Galería</h2>
+          <p>Desliza para ver más bebidas de nuestra carta.</p>
+        </div>
+        <div class="slider" tabindex="0" aria-label="Galería de imágenes, desliza para ver más">
+          <img src="img/coffe11.png" alt="Frappé de café con crema y chocolate" loading="lazy">
+          <img src="img/coffe13.png" alt="Moka helado con crema" loading="lazy">
+          <img src="img/coffe14.png" alt="Macchiato de caramelo helado" loading="lazy">
+          <img src="img/coffe15.png" alt="Café irlandés con crema" loading="lazy">
+          <img src="img/coffe6.png" alt="Latte de caramelo con crema" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAS -->
+    <section class="section" id="reservas">
+      <div class="container reservas">
+        <div class="reservas-text">
+          <h2>Reserva tu mesa</h2>
+          <p>Completa el formulario y te escribimos por WhatsApp para confirmar tu reserva. Atendemos grupos pequeños y grandes.</p>
+        </div>
+        <form class="form" id="form-reserva">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="fila">
+            <div class="campo">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="campo">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+          </div>
+          <div class="fila">
+            <div class="campo">
+              <label for="personas">Personas</label>
+              <select id="personas" name="personas" required>
+                <option>1</option><option selected>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+                <option>7</option><option>8 o más</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="sucursal">Sucursal</label>
+              <select id="sucursal" name="sucursal" required>
+                <option>Sucursal 1 (Centro)</option>
+                <option>Sucursal 2 (Norte)</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn" type="submit">Enviar reserva por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SUCURSALES -->
+    <section class="section section-alt" id="sucursales">
+      <div class="container">
+        <div class="section-head">
+          <h2>Nuestras sucursales</h2>
+          <p>Dos lugares en Cochabamba para tomar tu café.</p>
+        </div>
+        <div class="sucursales">
+          <article class="sucursal">
+            <h3>Sucursal 1 · Centro</h3>
+            <p>Calle y número<br>Cochabamba, Bolivia</p>
+            <p>Lunes a sábado: 8:00 a 21:00<br>Domingo: 9:00 a 18:00</p>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&query=Cochabamba+Bolivia" target="_blank" rel="noopener">Cómo llegar</a>
+          </article>
+          <article class="sucursal">
+            <h3>Sucursal 2 · Norte</h3>
+            <p>Calle y número<br>Cochabamba, Bolivia</p>
+            <p>Lunes a sábado: 8:00 a 21:00<br>Domingo: 9:00 a 18:00</p>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&query=Cochabamba+Bolivia" target="_blank" rel="noopener">Cómo llegar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section class="section" id="opiniones">
+      <div class="container">
+        <div class="section-head">
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="opiniones">
+          <blockquote class="opinion">
+            <p>Aquí va la opinión de un cliente.</p>
+            <cite>Nombre del cliente</cite>
+          </blockquote>
+          <blockquote class="opinion">
+            <p>Aquí va la opinión de un cliente.</p>
+            <cite>Nombre del cliente</cite>
+          </blockquote>
+          <blockquote class="opinion">
+            <p>Aquí va la opinión de un cliente.</p>
+            <cite>Nombre del cliente</cite>
+          </blockquote>
+        </div>
+        <a class="btn" href="https://www.google.com/maps" target="_blank" rel="noopener">Ver más opiniones</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer" id="contacto">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo-footer" href="#inicio" aria-label="Volver al inicio">
+          <img src="img/Logotipo elegante de café y loro.png" alt="Lora's Coffe">
+        </a>
+        <p>Café de calidad, ambiente acogedor y atención con cariño.</p>
+      </div>
+      <div>
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="#sucursales">Sucursales</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contáctanos</h2>
+        <ul>
+          <li>+591 000 00000</li>
+          <li>hola@tucafeteria.com</li>
+          <li>Cochabamba, Bolivia</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Redes sociales</h2>
+        <ul>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://wa.me/5910000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 Lora's Coffe. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // La reserva se envía por WhatsApp. Cambia el número (código de país + número, sin + ni espacios).
+    var NUMERO_WHATSAPP = "5910000000";
+
+    var form = document.getElementById("form-reserva");
+    var fecha = document.getElementById("fecha");
+    fecha.min = new Date().toISOString().split("T")[0];
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var d = new FormData(form);
+      var mensaje =
+        "Hola, quiero reservar una mesa en Lora's Coffe.\n" +
+        "Nombre: " + d.get("nombre") + "\n" +
+        "Fecha: " + d.get("fecha") + "\n" +
+        "Hora: " + d.get("hora") + "\n" +
+        "Personas: " + d.get("personas") + "\n" +
+        "Sucursal: " + d.get("sucursal");
+      window.open("https://wa.me/" + NUMERO_WHATSAPP + "?text=" + encodeURIComponent(mensaje), "_blank", "noopener");
+    });
+  </script>
+
 </body>
 </html>

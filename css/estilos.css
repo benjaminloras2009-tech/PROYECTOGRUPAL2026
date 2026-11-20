@@ -1,1 +1,301 @@
-body{font-family:Arial;background:#f2f2f2;padding-top:40px;text-align:center;}
+:root {
+  --cafe: #4A2415;
+  --cafe-oscuro: #371A0F;
+  --arena: #B98A55;
+  --arena-oscuro: #8F6736;
+  --crema: #F5EDE0;
+  --crema-clara: #FBF7F0;
+  --texto: #3A2A20;
+  --borde: #E6D9C5;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Josefin Sans", Arial, sans-serif;
+  --ancho: 1120px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  font-family: var(--sans);
+  color: var(--texto);
+  background: var(--crema-clara);
+  line-height: 1.7;
+}
+
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--serif); color: var(--cafe); line-height: 1.12; }
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, .slider:focus-visible {
+  outline: 3px solid var(--arena-oscuro);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute; left: -999px; top: 8px;
+  background: var(--cafe); color: #fff; padding: 8px 14px; z-index: 100;
+}
+.skip:focus { left: 8px; }
+
+.container { max-width: var(--ancho); margin: 0 auto; }
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background: var(--cafe);
+  color: var(--crema);
+  border: 2px solid var(--cafe);
+  border-radius: 4px;
+  padding: 12px 26px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--cafe-oscuro); border-color: var(--cafe-oscuro); }
+.btn-ghost { background: transparent; color: var(--crema); border-color: var(--arena); }
+.btn-ghost:hover { background: var(--arena); border-color: var(--arena); color: var(--cafe-oscuro); }
+.link {
+  color: var(--cafe);
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+.link:hover { color: var(--arena-oscuro); }
+
+/* Encabezado */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--crema-clara);
+  border-bottom: 1px solid var(--borde);
+}
+.header-inner {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 6px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo img { height: 72px; width: auto; }
+.nav { display: flex; gap: 28px; }
+.nav a {
+  color: var(--cafe);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover { border-bottom-color: var(--arena); }
+
+/* Portada */
+.hero { background: var(--cafe); }
+.hero-inner {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+}
+.hero h1 {
+  color: var(--crema-clara);
+  font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+  margin-bottom: 20px;
+}
+.hero p { color: #E8D8C3; font-size: 1.1rem; max-width: 34em; margin-bottom: 32px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero .btn:not(.btn-ghost) { background: var(--arena); border-color: var(--arena); color: var(--cafe-oscuro); }
+.hero .btn:not(.btn-ghost):hover { background: #D1A56A; border-color: #D1A56A; }
+.hero-img { width: 100%; max-width: 380px; justify-self: center; }
+
+/* Frase */
+.frase { background: var(--arena); padding: 22px 24px; text-align: center; }
+.frase p {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--cafe-oscuro);
+}
+
+/* Secciones */
+.section { padding: 80px 24px; }
+.section-alt { background: var(--crema); }
+.section-head { margin-bottom: 40px; max-width: 40em; }
+.section-head h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 3px solid var(--arena);
+  display: inline-block;
+}
+
+/* Productos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.producto {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.foto { background: var(--crema); padding: 20px; }
+.foto img { height: 210px; width: 100%; object-fit: contain; }
+.producto-body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.producto h3 { font-size: 1.5rem; margin-bottom: 6px; }
+.producto p { font-size: 0.95rem; flex: 1; margin-bottom: 14px; }
+.precio { color: var(--arena-oscuro); font-weight: 600; font-size: 1.15rem; }
+
+/* Galería */
+.slider {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+.slider img {
+  height: 300px;
+  width: auto;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* Reservas */
+.reservas {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: start;
+}
+.reservas-text h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 3px solid var(--arena);
+  display: inline-block;
+}
+.form {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 32px;
+  display: grid;
+  gap: 18px;
+}
+.fila { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo label { font-weight: 600; color: var(--cafe); font-size: 0.95rem; }
+.campo input, .campo select {
+  font-family: var(--sans);
+  font-size: 1rem;
+  padding: 11px 12px;
+  border: 1px solid #CDBBA2;
+  border-radius: 4px;
+  background: var(--crema-clara);
+  color: var(--texto);
+}
+.form .btn { justify-self: start; }
+
+/* Sucursales */
+.sucursales { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.sucursal {
+  background: var(--cafe);
+  color: var(--crema);
+  border-radius: 6px;
+  padding: 32px;
+}
+.sucursal h3 { color: var(--crema-clara); font-size: 1.8rem; margin-bottom: 14px; }
+.sucursal p { margin-bottom: 14px; }
+.sucursal .link { color: var(--arena); }
+.sucursal .link:hover { color: var(--crema-clara); }
+
+/* Opiniones */
+.opiniones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.opinion {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--arena);
+  border-radius: 4px;
+  padding: 24px;
+}
+.opinion p { margin-bottom: 12px; }
+.opinion cite { font-style: normal; font-weight: 600; color: var(--cafe); }
+
+/* Pie de página */
+.footer { background: var(--cafe-oscuro); color: #E8D8C3; }
+.footer-grid {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.logo-footer { background: var(--crema); border-radius: 6px; padding: 4px 12px; display: inline-block; margin-bottom: 14px; }
+.logo-footer img { height: 64px; }
+.footer h2 { font-size: 1.4rem; color: var(--crema-clara); margin-bottom: 12px; }
+.footer li { margin-bottom: 6px; }
+.footer a { color: #E8D8C3; text-underline-offset: 4px; }
+.footer a:hover { color: var(--arena); }
+.footer a:focus-visible { outline-color: var(--arena); }
+.copy {
+  border-top: 1px solid rgba(232, 216, 195, 0.2);
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.9rem;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-inner, .reservas { grid-template-columns: 1fr; }
+  .hero-inner { padding: 56px 24px; }
+  .hero-img { max-width: 300px; }
+  .grid, .opiniones { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .btn-header { display: none; }
+}
+
+/* Celular */
+@media (max-width: 640px) {
+  .header-inner { flex-wrap: wrap; gap: 0 16px; padding-bottom: 8px; }
+  .logo img { height: 60px; }
+  .nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    gap: 22px;
+    white-space: nowrap;
+  }
+  html { scroll-padding-top: 130px; }
+  .section { padding: 56px 20px; }
+  .grid { gap: 14px; }
+  .foto { padding: 12px; }
+  .foto img { height: 140px; }
+  .producto-body { padding: 14px 14px 18px; }
+  .producto h3 { font-size: 1.2rem; }
+  .producto p { font-size: 0.85rem; }
+  .sucursales, .opiniones, .fila { grid-template-columns: 1fr; }
+  .form { padding: 22px; }
+  .slider img { height: 230px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
