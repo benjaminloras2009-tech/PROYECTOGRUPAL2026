@@ -261,6 +261,17 @@ select:focus-visible, .slider:focus-visible {
   font-size: 0.9rem;
 }
 
+/* Íconos de redes sociales */
+.redes-iconos { display: flex; gap: 18px; align-items: center; }
+.redes-iconos a {
+  display: block;
+  line-height: 0;
+  padding: 4px;
+  border-radius: 50%;
+}
+.redes-iconos a:hover svg { opacity: 0.7; }
+.redes-iconos a:focus-visible { outline: 3px solid var(--arena); outline-offset: 2px; }
+
 /* Tablet */
 @media (max-width: 900px) {
   .hero-inner, .reservas { grid-template-columns: 1fr; }
