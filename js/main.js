@@ -1,4 +1,4 @@
- <script>
+
     // La reserva se envía por WhatsApp. Cambia el número (código de país + número, sin + ni espacios).
     var NUMERO_WHATSAPP = "59175632445";
 
@@ -17,5 +17,4 @@
         "Personas: " + d.get("personas") + "\n" +
         "Sucursal: " + d.get("sucursal");
       window.open("https://wa.me/" + NUMERO_WHATSAPP + "?text=" + encodeURIComponent(mensaje), "_blank", "noopener");
-    });
-  </script>
+      });
