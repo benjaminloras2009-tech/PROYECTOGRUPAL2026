@@ -1,52 +1,119 @@
+
+/* Página de reservas */
 .reserva-pagina {
-      max-width: var(--ancho);
-      margin: 0 auto;
-      padding: 64px 24px 80px;
-    }
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
 
-    .reserva-contenido {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 48px;
-    }
+.reserva-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
 
-    .reserva-portada {
-      width: 100%;
-      max-height: 560px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
+.reserva-portada {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
-    .reserva-intro h1 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      margin-bottom: 14px;
-    }
+.reserva-intro h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 14px;
+}
 
-    .reserva-intro p {
-      margin-bottom: 24px;
-    }
+.reserva-intro > p {
+  margin-bottom: 24px;
+}
 
-    .form-reserva-pagina {
-      background: #fff;
-      border: 1px solid var(--borde);
-      border-radius: 6px;
-      padding: 28px;
-      display: grid;
-      gap: 18px;
-    }
+.form-reserva-pagina {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+}
 
-    @media (max-width: 800px) {
-      .reserva-contenido {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
+.form-reserva-pagina .btn {
+  justify-self: start;
+}
 
-      .reserva-portada {
-        max-height: 360px;
-      }
-    }
- .footer{
-    text-align: center;
-    margin-top: 20px;
- }
+/* PIE DE PÁGINA */
+.footer {
+  background: var(--cafe-oscuro);
+  color: #E8D8C3;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.footer-grid {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand p {
+  max-width: 290px;
+}
+
+.footer .copy {
+  border-top: 1px solid rgba(232, 216, 195, 0.2);
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.9rem;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+
+  .reserva-contenido {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .reserva-portada {
+    max-height: 360px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+/* CELULAR */
+@media (max-width: 640px) {
+
+  .reserva-pagina {
+    padding: 56px 20px;
+  }
+
+  .reserva-contenido {
+    gap: 24px;
+  }
+
+  .reserva-portada {
+    max-height: 300px;
+  }
+
+  .form-reserva-pagina {
+    padding: 22px;
+  }
+
+  .form-reserva-pagina .fila {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
