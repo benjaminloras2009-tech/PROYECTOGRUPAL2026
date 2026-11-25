@@ -10,59 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/estilos.css">
-
-  <style>
-    .reserva-pagina {
-      max-width: var(--ancho);
-      margin: 0 auto;
-      padding: 64px 24px 80px;
-    }
-
-    .reserva-contenido {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 48px;
-    }
-
-    .reserva-portada {
-      width: 100%;
-      max-height: 560px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .reserva-intro h1 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      margin-bottom: 14px;
-    }
-
-    .reserva-intro p {
-      margin-bottom: 24px;
-    }
-
-    .form-reserva-pagina {
-      background: #fff;
-      border: 1px solid var(--borde);
-      border-radius: 6px;
-      padding: 28px;
-      display: grid;
-      gap: 18px;
-    }
-
-    @media (max-width: 800px) {
-      .reserva-contenido {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .reserva-portada {
-        max-height: 360px;
-      }
-    }
-  </style>
+<link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/estilos-reservas.css">
 </head>
 
 <body>
@@ -73,8 +22,8 @@
   <header class="header">
     <div class="header-inner">
 
-      <a class="logo" href="index.html">
-        <img src="img/Logotipo elegante de café y loro.png" alt="Lora's Coffe">
+      <a class="logo" href="../index.html">
+        <img src="../img/Logotipo elegante de café y loro.png" alt="Lora's Coffe">
       </a>
 
       <nav class="nav" aria-label="Principal">
@@ -84,7 +33,7 @@
         <a href="index.html#contacto">Contacto</a>
       </nav>
 
-      <a class="btn btn-header" href="index.html">Volver al inicio</a>
+      <a class="btn btn-header" href="../index.html">Volver al inicio</a>
 
     </div>
   </header>
@@ -98,7 +47,7 @@
       <div>
         <img
           class="reserva-portada"
-          src="img/Reserva tu mesa en Lora’s Coffe (1).png"
+          src="../img/Reserva tu mesa en Lora’s Coffe (1).png"
           alt="Reserva tu mesa en Lora's Coffe">
       </div>
 
