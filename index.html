@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,7 +32,7 @@
         <a href="#opiniones">Opiniones</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="btn btn-header" href="#reservas">Reservar mesa</a>
+      <a class="btn btn-header" href="reservar.html">Reservar mesa</a>
     </div>
   </header>
 
@@ -45,7 +46,7 @@
           <p>Preparamos cada bebida al momento, con granos seleccionados y recetas que combinan lo clásico con lo dulce. Ven a conversar, trabajar o simplemente descansar.</p>
           <div class="hero-actions">
             <a class="btn" href="#productos">Ver productos</a>
-            <a class="btn btn-ghost" href="#reservas">Reservar mesa</a>
+            <a class="btn btn-ghost" href="reservar.html">Reservar mesa</a>
           </div>
         </div>
         <img class="hero-img" src="img/coffe9.png" alt="Latte de vainilla con caramelo de Lora's Coffe">
@@ -163,42 +164,10 @@
       <div class="container reservas">
         <div class="reservas-text">
           <h2>Reserva tu mesa</h2>
-          <p>Completa el formulario y te escribimos por WhatsApp para confirmar tu reserva. Atendemos grupos pequeños y grandes.</p>
+          <p>Completa tus datos y reserva un espacio para disfrutar de Lora's Coffe. Te esperamos para compartir un buen café.</p>
+          <a class="btn" href="reservar.html">Hacer una reserva</a>
         </div>
-        <form class="form" id="form-reserva">
-          <div class="campo">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
-          </div>
-          <div class="fila">
-            <div class="campo">
-              <label for="fecha">Fecha</label>
-              <input type="date" id="fecha" name="fecha" required>
-            </div>
-            <div class="campo">
-              <label for="hora">Hora</label>
-              <input type="time" id="hora" name="hora" required>
-            </div>
-          </div>
-          <div class="fila">
-            <div class="campo">
-              <label for="personas">Personas</label>
-              <select id="personas" name="personas" required>
-                <option>1</option><option selected>2</option><option>3</option>
-                <option>4</option><option>5</option><option>6</option>
-                <option>7</option><option>8 o más</option>
-              </select>
-            </div>
-            <div class="campo">
-              <label for="sucursal">Sucursal</label>
-              <select id="sucursal" name="sucursal" required>
-                <option>Sucursal 1 (Centro)</option>
-                <option>Sucursal 2 (Norte)</option>
-              </select>
-            </div>
-          </div>
-          <button class="btn" type="submit">Enviar reserva por WhatsApp</button>
-        </form>
+        <img class="hero-img" src="img/Reserva tu mesa en Lora’s Coffe (1).png" alt="Reserva tu mesa en Lora's Coffe" loading="lazy">
       </div>
     </section>
 
@@ -211,12 +180,14 @@
         </div>
         <div class="sucursales">
           <article class="sucursal">
+            <img class="sucursal-img" src="img/Café cálido con arte latte.png" alt="Sucursal 1 de Lora's Coffe" loading="lazy">
             <h3>Sucursal 1 · Centro</h3>
             <p>Calle y número<br>Cochabamba, Bolivia</p>
             <p>Lunes a sábado: 8:00 a 21:00<br>Domingo: 9:00 a 18:00</p>
             <a class="link" href="https://www.google.com/maps/search/?api=1&query=Cochabamba+Bolivia" target="_blank" rel="noopener">Cómo llegar</a>
           </article>
           <article class="sucursal">
+            <img class="sucursal-img" src="img/Cafetería Lora’s al anochecer.png" alt="Sucursal 2 de Lora's Coffe" loading="lazy">
             <h3>Sucursal 2 · Norte</h3>
             <p>Calle y número<br>Cochabamba, Bolivia</p>
             <p>Lunes a sábado: 8:00 a 21:00<br>Domingo: 9:00 a 18:00</p>
@@ -265,7 +236,7 @@
         <h2>Navegación</h2>
         <ul>
           <li><a href="#productos">Productos</a></li>
-          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="reservar.html">Reservas</a></li>
           <li><a href="#sucursales">Sucursales</a></li>
           <li><a href="#opiniones">Opiniones</a></li>
         </ul>
