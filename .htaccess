@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Nombre de la carpeta del proyecto
+RewriteBase /loras-coffe/
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^reservas/?$ page/reservas.html [L]
+
+RewriteRule ^(inicio|productos|sucursales|opiniones)/?$ index.html [L]
+
+DirectoryIndex index.html
